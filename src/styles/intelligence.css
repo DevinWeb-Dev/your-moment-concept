@@ -1,0 +1,773 @@
+/* =============================================
+   YOUR MOMENT — BATCH 4
+   BUSINESS INTELLIGENCE
+   ============================================= */
+
+.ymi-page {
+  min-width: 0;
+  color: #173a35;
+}
+
+.ymi-page *,
+.ymi-page *::before,
+.ymi-page *::after {
+  box-sizing: border-box;
+}
+
+/* PAGE HEADINGS */
+
+.ymi-page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.ymi-page-heading h1 {
+  margin: 17px 0 18px;
+  font: 500 clamp(4rem, 5.6vw, 7.1rem)/0.88
+    "Cormorant Garamond", Georgia, serif;
+  letter-spacing: -0.045em;
+}
+
+.ymi-page-heading h1 em,
+.ymi-panel-heading h2 em,
+.ymi-data-panel h2 em {
+  color: #a38a5c;
+  font-weight: 400;
+}
+
+.ymi-page-heading p {
+  max-width: 660px;
+  margin: 0;
+  color: #819083;
+  font-size: 0.84rem;
+  line-height: 1.9;
+}
+
+/* METRICS */
+
+.ymi-metrics {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.ymi-metrics.is-three {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+.ymi-metric {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #e0e6dc;
+  background: #fffdf8;
+}
+
+.ymi-metric-icon {
+  display: grid;
+  place-items: center;
+  width: 49px;
+  height: 49px;
+  margin-bottom: 24px;
+  background: #e9eee4;
+  color: #a28b60;
+}
+
+.ymi-metric > strong {
+  font: 500 clamp(2.4rem, 3.3vw, 4.25rem)/0.94
+    "Cormorant Garamond", Georgia, serif;
+  overflow-wrap: anywhere;
+}
+
+.ymi-metric > span:not(.ymi-metric-icon) {
+  margin-top: 11px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.ymi-metric > p {
+  margin: 9px 0 0;
+  color: #849388;
+  font-size: 0.71rem;
+  line-height: 1.8;
+}
+
+/* REPORTS */
+
+.ymi-report-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ymi-panel {
+  min-width: 0;
+  padding: clamp(23px, 3.2vw, 36px);
+  border: 1px solid #e1e7dc;
+  background: #fffdf8;
+}
+
+.ymi-panel.is-wide {
+  grid-column: 1 / -1;
+}
+
+.ymi-panel-heading {
+  margin-bottom: 25px;
+}
+
+.ymi-panel-heading h2 {
+  margin: 13px 0 0;
+  font: 500 clamp(2.9rem, 4vw, 4.4rem)/0.96
+    "Cormorant Garamond", Georgia, serif;
+}
+
+.ymi-muted {
+  margin: 0 0 25px;
+  color: #89958a;
+  font-size: 0.76rem;
+  line-height: 1.85;
+}
+
+/* BAR CHARTS */
+
+.ymi-bars {
+  display: grid;
+  gap: 22px;
+}
+
+.ymi-bar-row {
+  display: grid;
+  gap: 10px;
+}
+
+.ymi-bar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ymi-bar-heading strong {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.ymi-bar-heading span {
+  color: #8d9a8b;
+  font-size: 0.7rem;
+}
+
+.ymi-bar-track {
+  height: 9px;
+  overflow: hidden;
+  background: #eef1e9;
+  border-radius: 20px;
+}
+
+.ymi-bar-track > span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    #789786,
+    #d1b887
+  );
+  transition: width 0.3s ease;
+}
+
+/* SIX MONTH CHART */
+
+.ymi-month-chart {
+  display: grid;
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  align-items: end;
+  min-height: 300px;
+  padding-top: 25px;
+}
+
+.ymi-month-item {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  gap: 12px;
+  min-width: 0;
+  height: 270px;
+}
+
+.ymi-month-item > strong {
+  font: 500 2rem
+    "Cormorant Garamond", Georgia, serif;
+}
+
+.ymi-month-track {
+  position: relative;
+  width: min(85px, 100%);
+  height: 100%;
+  min-height: 160px;
+  background: #f0f2eb;
+}
+
+.ymi-month-track > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg,
+    #234b42,
+    #c5af85
+  );
+  transition: height 0.3s ease;
+}
+
+.ymi-month-item small {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #879588;
+  white-space: nowrap;
+}
+
+/* DISCLAIMER */
+
+.ymi-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 25px;
+  padding: 22px 24px;
+  background: #e8eee2;
+  border-left: 2px solid #ad9669;
+}
+
+.ymi-disclaimer svg {
+  flex-shrink: 0;
+  color: #a08a60;
+}
+
+.ymi-disclaimer p {
+  margin: 0;
+  color: #788878;
+  font-size: 0.77rem;
+  line-height: 1.9;
+}
+
+/* VENUE TABS */
+
+.ymi-venue-list {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.ymi-venue-list button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 10px;
+  background: #fffdf8;
+  border: 1px solid #dfe6dc;
+  color: #173a35;
+  text-align: left;
+}
+
+.ymi-venue-list button.is-selected {
+  border-color: #87a088;
+  background: #e8efe4;
+}
+
+.ymi-venue-list img {
+  width: 70px;
+  height: 77px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.ymi-venue-list button > span {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ymi-venue-list small {
+  color: #8e9b8a;
+  font-size: 0.62rem;
+}
+
+.ymi-venue-list strong {
+  font: 500 1.55rem/0.95
+    "Cormorant Garamond", Georgia, serif;
+  overflow-wrap: anywhere;
+}
+
+/* VENUE INSIGHTS */
+
+.ymi-venue-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.ymi-venue-cover {
+  position: relative;
+  min-height: 435px;
+  overflow: hidden;
+  background: #c9c9b6;
+  color: #fffdf8;
+}
+
+.ymi-venue-cover > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ymi-venue-cover::after {
+  position: absolute;
+  inset: 30% 0 0;
+  content: "";
+  background: linear-gradient(
+    transparent,
+    #102d2ad9
+  );
+}
+
+.ymi-venue-cover > div {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 27px;
+  z-index: 1;
+}
+
+.ymi-venue-cover .ymo-eyebrow {
+  color: #e5d0a8;
+}
+
+.ymi-venue-cover h2 {
+  margin: 16px 0 10px;
+  font: 500 clamp(3.2rem, 5vw, 5.1rem)/0.9
+    "Cormorant Garamond", Georgia, serif;
+}
+
+.ymi-venue-cover p {
+  margin: 0;
+  color: #eee8d6;
+  font-size: 0.8rem;
+}
+
+/* VENUE STATS */
+
+.ymi-venue-facts {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.ymi-venue-facts article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  gap: 10px;
+  padding: 25px;
+  border: 1px solid #dfe5d9;
+  background: #fffdf8;
+}
+
+.ymi-venue-facts svg {
+  color: #b39969;
+}
+
+.ymi-venue-facts span {
+  font-size: 0.73rem;
+  color: #819081;
+}
+
+.ymi-venue-facts strong {
+  font: 500 clamp(2.3rem, 3vw, 4rem)/0.95
+    "Cormorant Garamond", Georgia, serif;
+  overflow-wrap: anywhere;
+}
+
+.ymi-venue-facts small {
+  color: #92a093;
+  font-size: 0.68rem;
+}
+
+.ymi-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  color: #173a35;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+/* SETTINGS */
+
+.ymi-settings-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: start;
+  gap: 22px;
+}
+
+.ymi-settings-form {
+  display: grid;
+  gap: 21px;
+}
+
+.ymi-field {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ymi-field > span {
+  color: #9c8963;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.ymi-field input,
+.ymi-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 15px;
+  border: 1px solid #dce3d9;
+  background: #f9fbf6;
+  color: #173a35;
+  font-size: 0.82rem;
+  line-height: 1.75;
+}
+
+.ymi-field input {
+  min-height: 52px;
+}
+
+.ymi-field textarea {
+  resize: vertical;
+}
+
+.ymi-field > small {
+  justify-self: end;
+  color: #98a398;
+  font-size: 0.67rem;
+}
+
+.ymi-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* SETTINGS PREVIEW */
+
+.ymi-settings-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 0;
+  padding: clamp(25px, 4vw, 44px);
+  color: #fffaf0;
+  background:
+    radial-gradient(
+      ellipse at 90% 5%,
+      #3c6055,
+      transparent 60%
+    ),
+    #173a35;
+}
+
+.ymi-settings-preview > svg {
+  color: #d9c19b;
+}
+
+.ymi-settings-preview .ymo-eyebrow {
+  color: #e0c89e;
+}
+
+.ymi-settings-preview h2 {
+  margin: 14px 0 5px;
+  font: 500 clamp(3.4rem, 4.4vw, 5.4rem)/0.89
+    "Cormorant Garamond", Georgia, serif;
+  overflow-wrap: anywhere;
+}
+
+.ymi-settings-preview strong {
+  color: #e6d4ac;
+  font-size: 0.8rem;
+}
+
+.ymi-settings-preview p {
+  color: #d8e3d7;
+  font-size: 0.78rem;
+  line-height: 1.85;
+}
+
+.ymi-settings-preview > div {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #ffffff37;
+  color: #d6e2d4;
+  font-size: 0.78rem;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.ymi-settings-preview > small {
+  font-size: 0.66rem;
+  color: #d0c6ab;
+}
+
+/* DATA CENTER */
+
+.ymi-data-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ymi-data-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.ymi-data-panel > svg {
+  color: #a38b62;
+}
+
+.ymi-data-panel h2 {
+  margin: 2px 0;
+  font: 500 clamp(3.3rem, 4.5vw, 5.1rem)/0.92
+    "Cormorant Garamond", Georgia, serif;
+}
+
+.ymi-data-panel > p {
+  margin: 0;
+  color: #819084;
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.ymi-data-panel > button {
+  margin-top: 16px;
+}
+
+.ymi-data-panel > small {
+  color: #929f93;
+  font-size: 0.72rem;
+}
+
+.ymi-file-picker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 13px 19px;
+  overflow: hidden;
+  background: #e8ede3;
+  border: 1px solid #ccd9c9;
+  color: #173a35;
+  font-size: 0.77rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ymi-file-picker input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.ymi-file-picker:focus-within {
+  outline: 3px solid #b89e71;
+  outline-offset: 3px;
+}
+
+/* BACKUP PREVIEW */
+
+.ymi-backup-preview {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  padding: 19px;
+  background: #edf1e8;
+  border: 1px solid #d6dfd0;
+}
+
+.ymi-backup-preview > strong {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.ymi-backup-preview > span {
+  font-size: 0.72rem;
+  color: #7b8e7d;
+}
+
+.ymi-backup-preview > label {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 0.72rem;
+  line-height: 1.75;
+}
+
+.ymi-backup-preview input[type="checkbox"] {
+  accent-color: #173a35;
+  margin-top: 4px;
+}
+
+.ymi-backup-preview > button {
+  justify-self: start;
+  white-space: normal;
+}
+
+/* FEEDBACK */
+
+.ymi-error,
+.ymi-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 13px 16px;
+  margin: 0;
+  color: #995744;
+  background: #fff0e4;
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+.ymi-success {
+  color: #477353;
+  background: #e3eedb;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1250px) {
+  .ymi-metrics {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .ymi-venue-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  .ymi-settings-grid,
+  .ymi-data-grid,
+  .ymi-venue-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .ymi-report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ymi-panel.is-wide {
+    grid-column: auto;
+  }
+
+  .ymi-venue-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .ymi-month-chart {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 550px) {
+  .ymi-page-heading h1 {
+    font-size: clamp(3.75rem, 12vw, 5rem);
+  }
+
+  .ymi-metrics,
+  .ymi-metrics.is-three,
+  .ymi-venue-list,
+  .ymi-venue-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .ymi-panel {
+    padding: 22px 16px;
+  }
+
+  .ymi-month-chart {
+    gap: 4px;
+  }
+
+  .ymi-month-item small {
+    font-size: 0.52rem;
+  }
+
+  .ymi-month-item > strong {
+    font-size: 1.6rem;
+  }
+
+  .ymi-settings-preview {
+    padding: 28px 22px;
+  }
+
+  .ymi-data-panel h2 {
+    font-size: 3.6rem;
+  }
+
+  .ymi-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ymi-actions > button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ymi-page *,
+  .ymi-page *::before,
+  .ymi-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
